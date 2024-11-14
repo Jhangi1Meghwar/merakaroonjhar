@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+.navbar{
+    background-color:MediumSeaGreen;
+    color:white;
+    padding:20px;
+    font-size:20px;
+    }
+    .navbar-brand{
+    color:white;
+    font-size:25px;
+    }
+    .collapse ul li a{
+    color:white;
+    margin:10px;
+    }
+    .collapse ul li a:hover{
+    text-decoration:underline 3px #8FBC8F ;
+    color:#98FB98;
+    }
+    .logo{
+    color:mediumseagreen;
+    }
+   
+    
+    
+    .container {
+      display: flex;
+      width: 80%;
+      margin-top: 20px;
+    }
+    
+    .sidebar {
+      width: 25%;
+      background-color: #e0e0e0;
+      padding: 10px;
+    }
+    
+    
+    
+    /* .sidebar ul li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      background-color: #d8d8d8;
+      margin-top: 5px;
+    }
+    
+    .sidebar ul li ul li a {
+      background-color: #fff;
+      margin-left: 10px;
+    }
+     */
+    .content {
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .text-content p {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+    
+    .videos {
+      margin-top: 20px;
+      width: 80%;
+      margin-left: 100px;
+
+    }
+    
+    .videos h3 {
+      align-items: center;
+      margin-top: 20px;
+      /* text-align: left; */
+      margin-bottom: 10px;
+    }
+    
+    video {
+      display: block;
+      margin-top: 30px;
+      max-width: 100%;
+    }
+
+            /* Footer Styling */
+        .footer {
+            background-color: mediumseagreen;
+            color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footer-about,
+        .footer-links,
+        .footer-social {
+            flex: 1;
+            min-width: 250px; /* Adjusted minimum width for better responsiveness */
+            margin: 10px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .footer-links ul,
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-social ul li {
+            margin: 8px 0;
+        }
+
+        .footer-links ul li a,
+        .footer-social ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-social ul li a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+            color:white;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-about,
+            .footer-links,
+            .footer-social {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-about h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer-links ul li,
+            .footer-social ul li {
+                font-size: 0.9rem;
+            }
+
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+</style>
+  <script src="../../js/about/"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg  ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mera-Karoonjhar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+ <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="toursim.html">Tourism</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <br><br>
+  <div class="container">
+    <!-- <aside class="sidebar">
+      <ul>
+        <li><a href="#">Facilities</a>
+          <ul>
+            <li><a href="#">Auditorium</a></li>
+            <li><a href="#">Smart Class Room</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Sports Facilities</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Social Responsibilities</a>
+          <ul>
+            <li><a href="#">Tree Plantation</a></li>
+            <li><a href="#">Community Service</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside> -->
+    <main class="content">
+      <section class="text-content">
+        <h1>About Karoonjhar</h1>
+        <p>Karoonnjhar mountain range is about 130km from Mithi and located on the northern edge of the Rann of Kutch. The mountain consists of granite rocks, one of the oldest rocks of the earth.</p>
+        <p>Karoonnjhar is approximately 19km in length and attains a height of 305 meters, smaller hills in the east are covered with sparse jungle, water springs, and streams.</p>
+        <!-- More paragraphs as in the image -->
+        <p>In the monsoon season, the rainwater pours down from the mountain and flows in more than twenty streams and it makes the environment lush green with beautiful scenic views.</p>
+      </section>
+      <section class="videos">
+        <h3>Some Karoonjhar Views</h3>
+        <video controls width="100%">
+          <source src="./karoonjhar.mp4 " type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <!-- <video controls width="100%">
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> -->
+      </section>
+    </main>
+  </div>
+  
+  <br><br>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Mera karoonjhar</h3>
+            <p>karoonjhar Hills - A beautiful landscape in Tharparkar, Pakistan. Known for its rich history, cultural significance, and breathtaking views.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="toursim.html">Tourism</a></li>
+              <li><a href ="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact </a></li>
+          </ul>
+      </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Mera karoonjhar. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+            
+  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+    </html>

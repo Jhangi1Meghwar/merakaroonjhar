@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+    <style>
+      .navbar{
+    background-color:MediumSeaGreen;
+    color:white;
+    padding:20px;
+    font-size:20px;
+    }
+    .navbar-brand{
+    color:white;
+    font-size:25px;
+    }
+    .collapse ul li a{
+    color:white;
+    margin:10px;
+    }
+    .collapse ul li a:hover{
+    text-decoration:underline 3px #8FBC8F ;
+    color:#98FB98;
+    }
+    .logo{
+    color:mediumseagreen;
+    }
+
+
+
+  main{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; color: white;
+    background:url(img8.jpg) no-repeat center center/cover ;
+}
+
+@keyframes dropdown {
+      0% { opacity: 0; 
+       transform: translateY(-10px); }
+       100%{
+        opacity: 1;
+        transform: translateY(0);
+       }
+      }
+
+       
+
+/* @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+      } */
+section h3{
+    font-size: 35px; font-weight: 20;letter-spacing: 3px;
+    text-shadow: 1px 1px 2px black;
+}
+
+section h1{
+    margin: 30px 0 20px 0;
+    font-size: 50px;
+    font-weight: 700px;
+    text-shadow: 2px 1px 5px black;
+    text-transform: uppercase;
+/* animation: fadeIn 2s ease-in-out; */
+
+}
+
+section p{
+    font-size: 25px;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px black;
+}
+
+section a{
+    padding: 12px 30px;
+    border-radius: 4px;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+}
+
+section .btnone{
+    background:MediumSeaGreen ;
+    color: #000;
+border-radius:40px;
+    animation: dropdown 0.5s ease-in-out;
+}
+
+ .btnone:hover{
+    background: white;
+    color: #000;
+ border:3px solid black;
+
+}
+section .btntwo{
+ background: MediumSeaGreen;
+  color: #000;
+border-radius:40px;
+}
+ .btntwo:hover{
+    background:  white;
+    color: #000;
+ border:3px solid black;
+}
+
+.change_content:after{
+   content: '';
+   animation: changetext 10s infinite linear;
+   color:#00b894;
+}
+
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#heade {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#para{
+  font-size: 25px;
+}
+
+#pe {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#he{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.attraction-grid {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+.attraction {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.attraction img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.attraction:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background: rgba(0, 0, 0, 0.6); */
+    padding: 5px 10px;
+    /* border-radius: 15px; */
+    color: white;
+    /* font-size: 16px; */
+    text-align: center;
+}
+
+.overlay span {
+    font-weight: bold;
+}
+.span{
+    color:black;
+    border: 3px solid mediumseagreen;
+    border-radius: 50px;
+    background:none;
+
+}
+.span:hover{
+    color:black;
+    border:3px solid mediumseagreen;
+    background-color: mediumseagreen;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+} */
+
+.guided-tours {
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.guided-tours h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.text {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+    padding: 10px;
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.tour-button {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid mediumseagreen;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.tour-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid mediumseagreen;
+}
+
+.social-icons {
+    display: -ms-inline-grid;
+    margin-top: 5px;
+    font-size: 50px;
+    color: mediumseagreen;
+}
+
+.social-icons a {
+    /* margin: 0px; */
+    font-size: 30px;
+   
+}
+
+/* .social-icons img {
+    width: 25px;
+    height: 30px;
+} */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 50%;
+    flex: 1;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+
+
+
+  
+  /* Contact Section Styles */
+  .contact-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  /* Background Image */
+  .background-image {
+    background: url('image.jpg') no-repeat center center/cover;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Info Box */
+  .info-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: left;
+    max-width: 400px;
+  }
+  
+  .info-box h2 {
+    margin-bottom: 15px;
+  }
+  
+  /* Info Items */
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .info-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .info-item p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+
+  /* Footer Styling */
+  .footer {
+            background-color: mediumseagreen;
+            color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footer-about,
+        .footer-links,
+        .footer-social {
+            flex: 1;
+            min-width: 250px; /* Adjusted minimum width for better responsiveness */
+            margin: 10px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .footer-links ul,
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-social ul li {
+            margin: 8px 0;
+        }
+
+        .footer-links ul li a,
+        .footer-social ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-social ul li a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-about,
+            .footer-links,
+            .footer-social {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-about h3 {
+                font-size: 1.8rem;
+            }
+
+            .footer-links ul li,
+            .footer-social ul li {
+                font-size: 1.2rem;
+            }
+
+            .footer-bottom p {
+                font-size: 1.0rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Mera-Karoonjhar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="toursim.html">Tourism</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+      <main id="homepage">
+    
+        <section>
+            <!-- <div class="video-background">
+                <video autoplay muted loop id="backgroundVideo">
+                    <source src="./dhel1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> -->
+
+            <h3>Welcome TO Tharparkar</h3>
+            <h1 id="logo">DO COME AND VISIT<span class="logo"> KAROONJHAR<span> <span class="change_content"></span></h1>
+            <p>Karoonjhar once is not enough</p>
+            <!-- <p class="text" id="demo"></p> -->
+            <!-- <a href="#" class="btnone" id="sikh" >Learn more</a> -->
+            <a href="signup.html" class="btntwo">Signup here</a>
+        </section>
+    </main>
+    <br><br>
+    <div class="container">
+        <h1 id="heade">Karoonjhar Sindh, Pakistan</h1>
+        <p id="para">Karoonnjhar mountain range is about 130km from Mithi and located on the northern edge of the Rann of Kutch. The mountain consists of granite rocks, one of the oldest rocks of the earth.
+            Karoonnjhar is approximately 19km in length and attains a height of 305 meters, smaller hills in the east are covered with sparse jungle, water springs, and streams.
+            
+            In the monsoon season, the rainwater pours down from the mountain and flows in more than twenty streams and it makes the environment lush green with beautiful scenic views.</p>
+            <p id="pe">Karoonjhar Mountain is a 4-hour drive from Hyderabad and 6 hours from Karachi.</p>
+            <br>        
+            <h2 id="he">Places to Visit in Karoonjhar</h2>
+    </div>
+
+<div class="attraction-grid">
+    <div class="attraction">
+        <img src="tem.jpg" alt="Jain Temple">
+        <div class="overlay">
+          <a href="index.html"> <button class="span">Jain -- Temple</button></a>
+        </div>
+    </div>
+    <div class="attraction">
+        <img src="./karoonjhar.jpg" alt="Karoonjhar">
+        <div class="overlay">
+           <a href="index.html"> <button class="span">Karoonjhar Mountains</button></a>
+        </div>
+    </div>
+    <div class="attraction">
+        <img src="./image.jpg" alt="Peackock">
+        <div class="overlay">
+           <a href="index.html"> <button class="span">Karoonjhar  Beauty</button></a>
+        </div>
+    </div>
+    <div class="attraction">
+        <img src="./gori.jpg" alt="Gori Temple">
+        <div class="overlay">
+           <a href="index.html"> <button class="span">Gori --Temple</button></a>
+        </div>
+    </div>
+    <div class="attraction">
+        <img src="./ghadhi.jpg" alt="Ghadi Bhit">
+        <div class="overlay">
+           <a href="index.html"> <button class="span">Ghadi --bhit  Mithi</button></a>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+
+
+<section class="guided-tours">
+    <h1>Guided Tours</h1>
+    <div class="content">
+        <div class="text">
+            <h2>Explore fantastic guided tours</h2>
+            <p id="pe">
+                Join 2 days tour for an unforgettable adventure and enjoy 
+                lunch and dinner at the most popular local restaurants and 
+                stay overnight in the iconic valley of Nagarparker. Admire the 
+                deep gorges and breathtaking view of the mountains.
+            </p>
+           <a href="toursim.html"><button class="tour-button">Tour Details</button></a> 
+            <div class="social-icons">
+                <!-- <a href="#"><img src="./youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="./images.jpeg" alt="Facebook"></a>
+                <a href="#"><img src="./insta.jpeg" alt="Instagram"></a>
+                <a href="#"><img src="./twiter.png" alt="Twitter"></a> -->
+      <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+
+
+
+            </div>
+        </div>
+
+        <div class="gallery">
+            <img src="image1.jpg" alt="Tour 1">
+            <img src="image2.jpg" alt="Tour 2">
+            <img src="image3.jpg" alt="Tour 3">
+            <img src="image4.jpg" alt="Tour 4">
+            <img src="image5.jpg" alt="Tour 5">
+            <img src="image6.jpg" alt="Tour 6">
+            <img src="image7.jpg" alt="Tour 7">
+            <img src="image8.jpeg" alt="Tour 8">
+            <img src="image9.jpeg" alt="Tour 9">
+            <img src="image10.jpeg" alt="Tour 10">
+            <img src="images11.jpeg" alt="Tour 11">
+            <img src="image12.jpeg" alt="Tour 12">
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="contact-section">
+    <h1>Contact us</h1>
+    <br><br>
+    <div class="contact-info">
+      <div class="background-image">
+        <div class="info-box">
+          <h2>Bookings and Info</h2>
+          <div class="info-item">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email Icon">
+            <p>info@merakaroonjhar.com</p>
+          </div>
+          <div class="info-item">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone Icon">
+            <p>+92 3240289320</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-about">
+          <h3>Mera Karoonjhar</h3>
+          <p>Karoonjhar Hills - A beautiful landscape in Tharparkar, Pakistan. Known for its rich history, cultural significance, and breathtaking views.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="toursim.html">Tourism</a></li>
+            <li><a href ="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact </a></li>
+        </ul>
+    </div>
+      <div class="footer-social">
+          <h4>Follow Us</h4>
+          <ul>
+              <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+              <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+              <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2023 Mera Karoonjhar. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</html>

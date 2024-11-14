@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+ .navbar{
+    background-color:MediumSeaGreen;
+    color:white;
+    padding:20px;
+    font-size:20px;
+    }
+    .navbar-brand{
+    color:white;
+    font-size:25px;
+    }
+    .collapse ul li a{
+    color:white;
+    margin:10px;
+    }
+    .collapse ul li a:hover{
+    text-decoration:underline 3px #8FBC8F ;
+    color:#98FB98;
+    }
+    .logo{
+    color:mediumseagreen;
+    }
+
+
+
+
+
+    
+    .hero {
+        background: url('./image6.jpg') no-repeat center center/cover;
+        padding: 100px 20px;
+        position: relative;
+    }
+    
+    .hero h2 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+  
+
+
+
+
+ 
+
+
+    .container {
+        display: flex;
+        max-width: 1000px;
+        width: 100%;
+        background-color: white;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .image-container {
+        flex: 1;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 40px;
+    }
+    
+    .content {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .content h3 {
+        font-size: 40px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    
+    .content p {
+        margin-bottom: 15px;
+        color: #555;
+    }
+    
+    .tour-btn {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .tour-btn:hover {
+        background-color: #45a049;
+    }
+
+.para{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+          /* Footer Styling */
+          .footer {
+            background-color: mediumseagreen;
+            color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footer-about,
+        .footer-links,
+        .footer-social {
+            flex: 1;
+            min-width: 250px; /* Adjusted minimum width for better responsiveness */
+            margin: 10px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .footer-links ul,
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-social ul li {
+            margin: 8px 0;
+        }
+
+        .footer-links ul li a,
+        .footer-social ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-social ul li a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+            color:white;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-about,
+            .footer-links,
+            .footer-social {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-about h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer-links ul li,
+            .footer-social ul li {
+                font-size: 0.9rem;
+            }
+
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+ </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Mera-Karoonjhar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html ">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="toursim.html">Toursim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="hero">
+        <h2>Places to visit in Tharparkar</h2>
+      </div>
+      <br><br>
+      <div class="container">
+        <div class="image-container">
+            <img src="tem.jpg" alt="Jain Temples">
+        </div>
+        <div id="jain" class="content">
+            <h3>Jain Temples</h3>
+            <p class="para">Jain Temples are located in the region around the Nagarparkar area. The site consists of multiple temples of Jain Dharma that are believed to be founded in the 12th and 13th centuries.</p>
+            <p class="para">An ancient mosque is also located beside them. According to various traditions, this mosque was built by Muslim rulers in Gujarat, and some historians associate it with the rulers of Delhi.</p>
+            <p class="para">The temples were inscribed on the tentative list for UNESCO World Heritage status in 2016 as the Nagarparkar Cultural Landscape.</p>
+            <a href="toursim.html" class="tour-btn">Tour Details</a>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image-container">
+          <img src="./karoonjhar.jpg" alt="Jain Temples">
+      </div>
+      <br><br>
+      <div class="content">
+          <h3>Karoonjhar Mountains</h3>
+          <p class="para">Karoonnjhar mountain range is about 130km from Mithi and located on the northern edge of the Rann of Kutch. The mountain consists of granite rocks, one of the oldest rocks of the earth.</p>
+          <p class="para">Karoonnjhar is approximately 19km in length and attains a height of 305 meters, smaller hills in the east are covered with sparse jungle, water springs, and streams.</p>
+          <p class="para">In the monsoon season, the rainwater pours down from the mountain and flows in more than twenty streams and it makes the environment lush green with beautiful scenic views.</p>
+          <a href="toursim.html" class="tour-btn">Tour Details</a>
+      </div>
+  </div>
+  
+  <br>
+
+  <div class="container">
+    <div class="image-container">
+        <img src="./mor3.jpeg" alt="Jain Temples">
+    </div>
+    <br><br>
+    <div class="content">
+        <h3>Karoonjhar Beauty Peackcock</h3>
+        <p class="para"><b>The Jewel of Karoonjhar</b> <br>The peacock, with its shimmering feathers and vibrant colors, is the crowning jewel of Karoonjhar’s landscape. </p>
+        <p class="para"> Known for its graceful dance during the monsoon, this majestic bird brings life and beauty to the region, captivating anyone who witnesses its display.</p>
+        <p class="para">More than just a stunning bird, the peacock symbolizes the rich culture and natural elegance of Karoonjhar, making it a true icon of this enchanting land.</p>
+        <a href="toursim.html" class="tour-btn">Tour Details</a>
+    </div>
+</div>
+
+  <br>
+  <div class="container">
+    <div class="image-container">
+        <img src="./gori.jpg" alt="Jain Temples">
+    </div>
+    <br><br>
+    <div class="content">
+        <h3>Gori Temple</h3>
+        <p class="para">The Gori Temple is also known as Gori  Mandar, a Jain Temple in Nagarparkar. It’s located 90km from Mithi. It was built in 1375-1376 CE. The temple was exclusively allocated to the 23rd Jain Tirthankar Lord Parshwanath.</p>
+        <p class="para">This temple along with other Jain temples of Nagarparkar were inscribed on the tentative list for UNESCO World Heritage status in 2016 as the Nagarparkar Cultural Landscape</p>
+        <a href="toursim.html" class="tour-btn">Tour Details</a>
+    </div>
+</div>
+<br>
+  <div class="container">
+    <div class="image-container">
+        <img src="./ghadhi.jpeg" alt="Jain Temples">
+    </div>
+    <br><br>
+    <div class="content">
+        <h3>Ghadhi-Bhit</h3>
+        <p class="para">Ghadi Bhit is an elevation point of the town built on a sandhill and gives a breathtaking panoramic view of the Mithi town.</p>
+        <p class="para">There was also a check post of the Talpur rulers that was demolished over time. This check post was created to monitor external invaders and bandits from Gujarat and Rajasthan at one time.</p>
+        <p class="para">As the sun sets in the rear of the hill, the city lights shine so it feels like someone has lit candles across the town. While the stars in the sky make this scene even more attractive.</p>
+        <p class="para">
+          Ghadi Bhit is a popular tourist spot and a must-visit place if you are coming to Tharparkar.</p>
+        <a href="toursim.html" class="tour-btn">Tour Details</a>
+    </div>
+</div>
+  <br>
+      
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-about">
+          <h3>Mera karoonjhar</h3>
+          <p>karoonjhar Hills - A beautiful landscape in Tharparkar, Pakistan. Known for its rich history, cultural significance, and breathtaking views.</p>
+      </div>
+      <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="toursim.html">Tourism</a></li>
+              <li><a href ="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact </a></li>
+          </ul>
+      </div>
+      <div class="footer-social">
+          <h4>Follow Us</h4>
+          <ul>
+              <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+              <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+              <li><a href.mailto="https://youtube.com" target="_blank">Email</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2023 Mera karoonjhar. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</html>

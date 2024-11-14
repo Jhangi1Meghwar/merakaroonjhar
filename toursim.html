@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toursim </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+.navbar{
+    background-color:MediumSeaGreen;
+    color:white;
+    padding:20px;
+    font-size:20px;
+    }
+    .navbar-brand{
+    color:white;
+    font-size:25px;
+    }
+    .collapse ul li a{
+    color:white;
+    margin:10px;
+    }
+    .collapse ul li a:hover{
+    text-decoration:underline 3px #8FBC8F ;
+    color:#98FB98;
+    }
+    .logo{
+    color:mediumseagreen;
+    }
+
+    .hero-section {
+        background: url('image1.jpg') center center/cover no-repeat;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5em;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.5em 1em;
+        text-align: right;
+        margin-left: 900px;
+        margin-bottom: 300px;
+    }
+    
+    .tour-info, .tour-package, .features {
+        padding: 2em;
+        text-align: center;
+    }
+    
+    .tour-info h2, .tour-package h2 {
+        font-size: 2.3em;
+        margin-bottom: 0.5em;
+    }
+    
+    .tour-info p, .tour-package p {
+        margin-bottom: 1em;
+        line-height: 1.6;
+    }
+    .paa{
+    max-width: 1200px;
+    padding-left: 100px;
+    font-size: 30px;
+    }
+    
+    .btn-book {
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.5em 1.5em;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    .btn-book:hover{
+color: black;
+border: 2px solid mediumseagreen;
+background-color: white;
+    }
+    .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 2em 0;
+        background-color: #f4f4f4;
+    }
+    .lastp{
+        font-size: 25px;
+    }
+    .feature {
+        text-align: center;
+        width: 20%;
+    }
+    
+    .feature h3 {
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
+        color: #333;
+    }
+
+   
+        /* Footer Styling */
+        .footer {
+            background-color: mediumseagreen;
+            color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footer-about,
+        .footer-links,
+        .footer-social {
+            flex: 1;
+            min-width: 250px; /* Adjusted minimum width for better responsiveness */
+            margin: 10px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .footer-links ul,
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-social ul li {
+            margin: 8px 0;
+        }
+
+        .footer-links ul li a,
+        .footer-social ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-social ul li a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+            color:white;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-about,
+            .footer-links,
+            .footer-social {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-about h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer-links ul li,
+            .footer-social ul li {
+                font-size: 0.9rem;
+            }
+
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+ </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg  ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mera-Karoonjhar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="toursim.html">Tourism</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- <br><br> -->
+
+  <section class="hero-section">
+    <h1>Guided Tours</h1>
+</section>
+
+<section class="tour-info">
+    <h2>2 Days Tour</h2>
+    <p class="paa">Join a 2 days tour for an unforgettable adventure and enjoy lunch and dinner at the most popular local restaurants and stay overnight in the iconic valley of Nagarparkar. Admire the deep gorges and breathtaking view of the Mountains.</p>
+    <p class="paa">Hop from City of Karachi or Hyderabad as you explore the world's oldest mountainous scenery that spans back thousands of years and learn about its unique culture, heritage, and food.</p>
+   <a href="contact.html"><button class="btn-book">Contact us For Booking</button></a> 
+</section>
+
+<section class="tour-package">
+    <h2>Tour Package</h2>
+    <p class="paa">Our tour package includes 2 days and one night trip to Thar desert including transportation, accommodation, meals, guided tours, and sightseeing. These tours are ideal for 10-15 groups of friends or family members.</p>
+    <p class="paa">Group discounts are available.</p>
+    <a href="contact.html"><button class="btn-book">Contact us For Booking</button></a> 
+
+</section>
+
+<section class="features">
+    <div class="feature">
+        <h3>Accommodation</h3>
+        <p class="lastp">Air-Conditioned Accommodation on sharing basis</p>
+    </div>
+    <div class="feature">
+        <h3>Meals</h3>
+        <p class="lastp">Lunch and Dinner with the finest of local cuisine</p>
+    </div>
+    <div class="feature">
+        <h3>Transport</h3>
+        <p class="lastp">Air-conditioned transport with return transfers from/to Karachi/Hyderabad - Thar - Karachi/Hyderabad</p>
+    </div>
+    <div class="feature">
+        <h3>Guided Tours</h3>
+        <p class="lastp">Guided tours and sightseeing with experienced local people</p>
+    </div>
+</section>
+
+
+  
+  
+  <br><br>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Mera karoonjhar</h3>
+            <p>karoonjhar Hills - A beautiful landscape in Tharparkar, Pakistan. Known for its rich history, cultural significance, and breathtaking views.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="toursim.html">Tourism</a></li>
+                <li><a href ="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Mera karoonjhar. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+              <script> 
+document.querySelectorAll('.btn-book').forEach(button => {
+    button.addEventListener('click', () => {
+        alert("Thank you for your interest! Booking functionality coming soon.");
+    });
+});
+
+</script>
+  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+    </html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourism</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Navbar Styling */
+    .navbar {
+      background-color: MediumSeaGreen;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+    }
+    .navbar-brand {
+      color: white;
+      font-size: 25px;
+    }
+    .collapse ul li a {
+      color: white;
+      margin: 10px;
+    }
+    .collapse ul li a:hover {
+      text-decoration: underline 3px #8FBC8F;
+      color: #98FB98;
+    }
+
+    /* Slider Styling */
+    .slider {
+      position: relative;
+      height: 50%;
+      max-height: 500px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+    .text-overlay {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: rgb(205, 194, 194);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .text-overlay h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+    .text-overlay p {
+      font-size: 25px;
+    }
+
+    /* Main Content Styling */
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .left-section, .middle-section, .right-section {
+      flex: 1;
+    }
+    .left-section {
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    .left-section p {
+      font-size: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .explore-link {
+      display: inline-block;
+      color: #4CAF50;
+      font-weight: bold;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+    .middle-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .director-image {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .caption {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+      margin-top: -5px;
+      width: 100%;
+      max-width: 250px;
+      border-radius: 0 0 8px 8px;
+    }
+    .right-section h2 {
+      color: #4CAF50;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+    .right-section p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+        /* Team Section Styling */
+        .tea {
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .team-section,.location-section {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .team-section h1,.team-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .team-title, .location-title {
+            color: mediumseagreen;
+        }
+        .team-container,.location-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            width: 100%;
+        }
+        .team-card,.location-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            width: 100%;
+            max-width: 300px;
+        }
+        .team-card:hover,.location-card:hover {
+            transform: scale(1.05);
+        }
+        .team-card img,.location-card img  {
+            width: 100%;
+            max-width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 3px solid mediumseagreen;
+            margin-bottom: 15px;
+        }
+        .team-card h2,.location-card h2 {
+            font-size: 1.7rem;
+            margin-bottom: 5px;
+        }
+        .team-card p,.location-card p {
+            color: #000000;
+            margin-bottom: 15px;
+        }
+        .team-card button,.location-card button {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: 2px solid mediumseagreen;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .team-card button:hover,.location-card button:hover {
+            background-color: mediumseagreen;
+            color: white;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 992px) {
+            .team-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+        h1, h2, h3 {
+            color: mediumseagreen;
+            text-align: center;}
+          
+        .section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;}
+
+        .mission-vision p, .core-values ul, .timeline ul {
+          text-align: center;
+        }
+        .team-card, .testimonial-card, .timeline-card, .faq-item {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .core-values ul, .timeline ul, .faq ul {
+            list-style: none;
+            padding: 0;
+        }
+           
+        .p{
+          font-size: 28px;
+        }
+
+
+ 
+
+
+    /* Footer Styling */
+    .footer {
+      background-color: mediumseagreen;
+      color: #f4f4f4;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .footer-about,
+    .footer-links,
+    .footer-social {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+    }
+    .footer-about h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #FFD700;
+    }
+    .footer-links ul,
+    .footer-social ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-links ul li,
+    .footer-social ul li {
+      margin: 8px 0;
+    }
+    .footer-links ul li a,
+    .footer-social ul li a {
+      color: #f4f4f4;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links ul li a:hover,
+    .footer-social ul li a:hover {
+      color: #4d7aec;
+    }
+    .footer-bottom {
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-overlay h2 {
+        font-size: 25px;
+      }
+      .text-overlay p {
+        font-size: 18px;
+      }
+      .team-container {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 480px) {
+      .navbar-brand {
+        font-size: 20px;
+      }
+      .navbar {
+        padding: 10px;
+        font-size: 18px;
+      }
+      .footer-about h3,
+      .right-section h2,
+      .team-section h1 {
+        font-size: 1.5rem;
+      }
+      .footer-links ul li,
+      .footer-social ul li {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mera-Karoonjhar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="toursim.html">Tourism</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <div class="slider">
+    <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <img src="./ghadhi.jpeg" alt="Beautiful Landscape">
+            <div class="text-overlay">
+                <h2>Welcome to Tharparkar</h2>
+                <p>Discover the beauty and culture of the desert.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="./mountain1.jpg" alt="Mountain View">
+            <div class="text-overlay">
+                <h2>Explore the Mountains</h2>
+                <p>Experience breathtaking views and adventures.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="./mor6.jpeg" alt="Peackock">
+            <div class="text-overlay">
+                <h2>Natural Beauty of the karoonjhar</h2>
+                <p>The peacock, with its vibrant plumage and graceful presence.</p>
+               
+            </div>
+        </div>
+    </div>
+</div>
+     
+
+<br><br>
+
+<br>
+
+<div class="container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <img src="./karoonjhar.png" alt="KAroonjhar logo" class="logo">
+      <p>Welcome to  <br><strong>"Mera Karoonjhar" </strong> Pakistan’s National Tourism Brand , launched by <br><strong> Jhangi Meghwar Mithi Tharparkar.</strong></p>
+      <a href="../toursim/index.html" class="explore-link">Click here to Explore Mera-Karoonjhar Official Tourism Facilitation E-Portal</a>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="middle-section">
+      <img src="./director.png" alt="Director Image" class="director-image">
+      <div class="caption">
+        <strong>MR. Jhangi Motiram Meghwar</strong><br>
+        Managing Director<br> Mera-Karoonjhar
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <h2>Welcome to Tharparkar</h2>
+      <p>
+        Discover the timeless beauty of Tharparkar, where golden sands, ancient temples, and vibrant traditions create a unique tapestry of culture and nature. Immerse yourself in the rhythms of folk music, the artistry of local crafts, and the warmth of Thari hospitality. From breathtaking sunsets over the dunes to the flavors of traditional cuisine, Tharparkar promises an unforgettable journey filled with wonder.
+      </p>
+      <!-- <a href="#" class="read-more-link">Read More</a> -->
+    </div>
+  </div>
+<br></br>
+ <!-- Team Section -->
+    <div class="tea">
+        <div class="team-section">
+            <h1>Our <span class="team-title">Team</span></h1>
+            <div class="team-container">
+                <div class="team-card">
+                    <img src="love.png" alt="Kumar">
+                    <h2>Love Kumar Sangi</h2>
+                    <p>Deputy Managing Director</p>
+                    <button onclick="showInfo('Kumar')">View Profile</button>
+                </div>
+                <div class="team-card">
+                    <img src="partab .png" alt="Janu">
+                    <h2>Partab Saathi</h2>
+                    <p>General Manager</p>
+                    <button onclick="showInfo('Janu')">View Profile</button>
+                </div>
+                <div class="team-card">
+                    <img src="govind.png" alt="Jhangi">
+                    <h2>Govind Rai</h2>
+                    <p>Finance Manager</p>
+                    <button onclick="showInfo('Jhangi')">View Profile</button>
+                </div>
+                <div class="team-card">
+                    <img src="mahveer.png" alt="Mahveer">
+                    <h2>Mahveer Rao</h2>
+                    <p>Human Resource Manager</p>
+                    <button onclick="showInfo('Mahveer')">View Profile</button>
+                </div>
+                <div class="team-card">
+                    <img src="darpna-removebg-preview.png" alt="Darpna">
+                    <h2>Darpna Kumari</h2>
+                    <p>Tourism Development Officer</p>
+                    <button onclick="showInfo('Darpna')">View Profile</button>
+                </div>
+                <div class="team-card">
+                    <img src="burka-removebg-preview.png" alt="Mariam">
+                    <h2>Mariam Raz</h2>
+                    <p>Event Coordinator/Manager</p>
+                    <button onclick="showInfo('Mariam')">View Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+        <!-- Office Location Section -->
+        <div class="tea">
+          <div class="location-section">
+              <h1>Our <span class="location-title">Office Locations</span></h1>
+              <div class="location-container">
+                  <div class="location-card">
+                      <h2>Head Office</h2>
+                      <p>123 Business St, New York, NY</p>
+                      <p>Phone: (123) 456-7890</p>
+                      <button onclick="location.href='https://www.google.com/maps/@24.745774,69.7996374,16z?entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D'" target="_blank">View on Map</button>
+                  </div>
+                  <div class="location-card">
+                      <h2>Branch Office</h2>
+                      <p>456 Market St, San Francisco, CA</p>
+                      <p>Phone: (987) 654-3210</p>
+                      <button onclick="location.href='https://www.google.com/maps/place/Chelhar,+Tharparkar,+Sindh,+Pakistan/@24.9817688,69.902351,14z/data=!3m1!4b1!4m6!3m5!1s0x394fa7aafb8af941:0x30a68bb24066fa5d!8m2!3d24.9808367!4d69.9193004!16s%2Fm%2F0gty2kf?entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D' "target="_blank">View on Map</button>
+                  </div>
+                  <div class="location-card">
+                      <h2>Regional Office</h2>
+                      <p>789 Central Ave, Chicago, IL</p>
+                      <p>Phone: (456) 123-7890</p>
+                      <button onclick="location.href='https://maps.google.com'" target="_blank">View on Map</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+ <br><br>
+         <!-- Mission & Vision Section -->
+    <div class="section mission-vision">
+      <h2>Mission & Vision</h2>
+      <p class="p">At Mera Karoonjhar, our mission is to celebrate, preserve, and promote the unique heritage, natural beauty, and cultural richness of the Karoonjhar region. We aim to connect locals and visitors alike with the land's vibrant history, fostering a sense of pride and commitment to sustainable development. Through our platform, we strive to empower communities, create opportunities, and inspire responsible tourism that protects and respects the environment and traditions of Karoonjhar.</p>
+      <p class="p">Our vision is a thriving Karoonjhar that is recognized and celebrated worldwide for its timeless beauty, cultural depth, and ecological importance. We envision a future where the region’s heritage is preserved for generations to come, where tourism enhances local lives without compromising the natural landscape, and where Mera Karoonjhar serves as a bridge between Karoonjhar’s wonders and the global community.</p>
+  </div>
+
+<br>
+    <!-- Core Values -->
+    <div class="section core-values">
+      <h2>Our Core Values</h2>
+      <ul>
+          <li class="p">Integrity</li>
+          <li class="p" >Innovation</li>
+          <li class="p">Teamwork</li>
+          <li class="p">Customer Satisfaction</li>
+      </ul>
+  </div>
+
+  <!-- Meet Our Leaders -->
+  <div class="section">
+      <h2>Meet Our Leaders</h2>
+      <div class="team">
+          <div class="team-card">
+              <img src="ceo.png" alt="Leader 1">
+              <h3>Kumar Janu</h3>
+              <p>CEO</p>
+          </div>
+          <div class="team-card">
+              <img src="love.png" alt="Leader 2">
+              <h3>Love Sangi</h3>
+              <p>CTO</p>
+          </div>
+          <!-- Add more leaders as needed -->
+      </div>
+  </div>
+<br>
+  <!-- Company Timeline -->
+  <div class="section timeline">
+      <h2>Company Timeline</h2>
+      <ul>
+          <li class="p">2010: Company founded</li>
+          <li class="p">2015: Opened new headquarters</li>
+          <li class="p">2020: Reached 1 million customers</li>
+          <!-- Add more milestones as needed -->
+      </ul>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="section">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-card">
+          <p class="p">"An amazing experience working with this team. Professional and innovative!"</p>
+          <p class="p">Brigadier Mohammad Usman </p>
+      </div>
+      <!-- Add more testimonials as needed -->
+  </div>
+
+
+<br>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Mera Karoonjhar</h3>
+            <p>karoonjhar Hills - A beautiful landscape in Tharparkar, Pakistan. Known for its rich history, cultural significance, and breathtaking views.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="toursim.html">Tourism</a></li>
+                <li><a href ="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Mera karoonjhar. All Rights Reserved.</p>
+    </div>
+</footer>
+  <script>
+    // script.js
+
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+setInterval(nextSlide, 3000); // Change every 3 seconds
+showSlide(currentIndex);
+
+  </script>   
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
